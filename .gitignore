@@ -1,0 +1,7 @@
+# OS X
+.DS_Store
+.Trashes
+.localized
+
+.bitrise*
+.gows.user.yml
