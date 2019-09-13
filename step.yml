@@ -85,6 +85,16 @@ inputs:
       is_required: false
       skip_if_empty: true
       category: Code analysis
+  - JUNIT_ENABLED:
+    opts:
+      title: "Enable JUNIT reporting"
+      description: "Leave null to skip JUNIT report."
+      is_required: false
+      skip_if_empty: true
+      value_options:
+        - 
+        - Enable
+      category: Code analysis
   - JIRA_SUBDOMAIN:
     opts:
       title: "Subdomain of Jira"
