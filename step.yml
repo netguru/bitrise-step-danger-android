@@ -74,7 +74,7 @@ inputs:
   - DETEKT_ENABLED:
     opts:
       title: "Enable Detekt reporting"
-      is_required: false
+      is_required: true
       value_options:
         - True
         - False
@@ -89,7 +89,7 @@ inputs:
   - JUNIT_ENABLED:
     opts:
       title: "Enable JUNIT reporting"
-      is_required: false
+      is_required: true
       value_options:
         - True
         - False
