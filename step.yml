@@ -71,12 +71,13 @@ inputs:
       is_required: false
       skip_if_empty: true
       category: Code analysis
-  - DETEKT_REPORT_PATH:
+  - DETEKT_ENABLED:
     opts:
-      title: "Path to detekt report file"
-      description: "Leave empty to skip detekt report analysis."
+      title: "Enable Detekt reporting"
       is_required: false
-      skip_if_empty: true
+      value_options:
+        - True
+        - False
       category: Code analysis
   - JACOCO_REPORT_PATH:
     opts:
@@ -88,12 +89,10 @@ inputs:
   - JUNIT_ENABLED:
     opts:
       title: "Enable JUNIT reporting"
-      description: "Leave null to skip JUNIT report."
       is_required: false
-      skip_if_empty: true
       value_options:
-        - 
-        - Enable
+        - True
+        - False
       category: Code analysis
   - JIRA_SUBDOMAIN:
     opts:
