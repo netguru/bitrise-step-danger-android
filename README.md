@@ -28,7 +28,7 @@ Plugins and inputs connected with them that are used in step:
   - Gradle task for linter
   - Path to linter report file
 * [danger-kotlin_detekt](https://github.com/NFesquet/danger-kotlin_detekt)
-  - Path to detekt report file
+  - Enable Detekt reporting
 * [danger-junit](https://github.com/orta/danger-junit)
   - Enable JUNIT reporting
 * [danger-jacoco](https://github.com/Malinskiy/danger-jacoco)
@@ -53,15 +53,15 @@ your_workflow:
       title: Run Danger checks
       is_always_run: true
       inputs:
-        - LINT_GRADLE_TASK: app:lint
-        - LINT_REPORT_PATH: app/build/reports/lint-results.xml
-        - DETEKT_REPORT_PATH: build/reports/detektMerged.xml
-        - JACOCO_REPORT_PATH: app/build/reports/jacoco/mockDebug/jacoco.xml
-        - JIRA_SUBDOMAIN: netguru
-        - JIRA_IDENTIFIERS: KEY
-        - SLACK_NOTIFICATION_CHANNEL: channel-name
-        - APK_PATH: $BITRISE_APK_PATH
-        - JUNIT_ENABLED: Enable
+        - LINT_GRADLE_TASK: example
+        - LINT_REPORT_PATH: example
+        - DETEKT_ENABLED: example # true/false
+        - JUNIT_ENABLED: example # true/false
+        - JACOCO_REPORT_PATH: example
+        - JIRA_SUBDOMAIN: example
+        - JIRA_IDENTIFIERS: example
+        - SLACK_NOTIFICATION_CHANNEL: example
+        - APK_PATH: example
 ```
 
 
