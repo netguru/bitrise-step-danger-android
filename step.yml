@@ -97,7 +97,7 @@ inputs:
   - JIRA_SUBDOMAIN: netguru
     opts:
       title: "Subdomain of Jira"
-      description: "Part of Jira's linkt <subdomain>.atlassian.com. Leave empty to not connecting PR with Jira task."
+      description: "Part of Jira's link subdomain.atlassian.com. Leave empty to not connecting PR with Jira task."
       is_required: false
       skip_if_empty: true
       category: Jira
