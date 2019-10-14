@@ -58,8 +58,8 @@ your_workflow:
         - DETEKT_ENABLED: example # true/false
         - JUNIT_ENABLED: example # true/false
         - JACOCO_REPORT_PATH: example
-        - JIRA_SUBDOMAIN: example
-        - JIRA_IDENTIFIERS: example
+        - JIRA_SUBDOMAIN: example # Part of link to jira <JIRA_SUBDOMAIN>.atlassian.net/browse
+        - JIRA_IDENTIFIERS: example # First part of Jira's task id, for example for task ABC-123 it will be ABC
         - SLACK_NOTIFICATION_CHANNEL: example
         - APK_PATH: example
 ```
