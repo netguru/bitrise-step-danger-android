@@ -44,27 +44,6 @@ Plugins and inputs connected with them that are used in step:
 
 If you leave any of inputs from plugin blank, this plugin will be skipped during step.
 
-You can also set default values of inputs in **bitrise.yml**:
-
-```yml
-your_workflow:
-  steps:
-    - git::https://github.com/netguru/bitrise-step-danger-android.git@master:
-      title: Run Danger checks
-      is_always_run: true
-      inputs:
-        - LINT_GRADLE_TASK: example
-        - LINT_REPORT_PATH: example
-        - DETEKT_ENABLED: example # true/false
-        - JUNIT_ENABLED: example # true/false
-        - JACOCO_REPORT_PATH: example
-        - JIRA_SUBDOMAIN: example
-        - JIRA_IDENTIFIERS: example
-        - SLACK_NOTIFICATION_CHANNEL: example
-        - APK_PATH: example
-```
-
-
 ## About
 
 This project is made with ❤️ by [Netguru](https://www.netguru.com).

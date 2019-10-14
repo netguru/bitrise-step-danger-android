@@ -57,21 +57,21 @@ toolkit:
     entry_file: step.sh
 
 inputs:
-  - LINT_GRADLE_TASK:
+  - LINT_GRADLE_TASK: app:lint
     opts:
       title: "Gradle task for linter"
       description: "Leave empty to skip lint."
       is_required: false
       skip_if_empty: true
       category: Code analysis
-  - LINT_REPORT_PATH:
+  - LINT_REPORT_PATH: app/build/reports/lint-results.xml
     opts:
       title: "Path to linter report file"
       description: "Leave empty to skip lint."
       is_required: false
       skip_if_empty: true
       category: Code analysis
-  - DETEKT_ENABLED:
+  - DETEKT_ENABLED: true
     opts:
       title: "Enable Detekt reporting"
       is_required: true
@@ -79,14 +79,14 @@ inputs:
         - True
         - False
       category: Code analysis
-  - JACOCO_REPORT_PATH:
+  - JACOCO_REPORT_PATH: app/build/reports/jacoco/mockDebug/jacoco.xml
     opts:
       title: "Path to jacoco report file"
       description: "Leave empty to skip jacoco report analysis."
       is_required: false
       skip_if_empty: true
       category: Code analysis
-  - JUNIT_ENABLED:
+  - JUNIT_ENABLED: true
     opts:
       title: "Enable JUNIT reporting"
       is_required: true
@@ -94,17 +94,17 @@ inputs:
         - True
         - False
       category: Code analysis
-  - JIRA_SUBDOMAIN:
+  - JIRA_SUBDOMAIN: netguru
     opts:
       title: "Subdomain of Jira"
-      description: "Leave empty to not connecting PR with Jira task."
+      description: "Part of Jira's linkt <subdomain>.atlassian.com. Leave empty to not connecting PR with Jira task."
       is_required: false
       skip_if_empty: true
       category: Jira
   - JIRA_IDENTIFIERS:
     opts:
       title: "Jira keys of projects related to Pull Request"
-      description: "Leave empty to not connecting PR with Jira task."
+      description: "First part of Jira's task id. For example with tasks with id ABC-123 it will be ABC. Leave empty to not connecting PR with Jira task."
       is_required: false
       skip_if_empty: true
       category: Jira
@@ -114,7 +114,7 @@ inputs:
       description: "Leave empty to skip slack notifications."
       is_required: false
       skip_if_empty: true
-  - APK_PATH:
+  - APK_PATH: $BITRISE_APK_PATH
     opts:
       title: "Path to generated apk that should be analysed"
       description: "Leave empty to skip apk analysis."
