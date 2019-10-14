@@ -97,14 +97,14 @@ inputs:
   - JIRA_SUBDOMAIN: netguru
     opts:
       title: "Subdomain of Jira"
-      description: "Leave empty to not connecting PR with Jira task."
+      description: "Part of Jira's linkt <subdomain>.atlassian.com. Leave empty to not connecting PR with Jira task."
       is_required: false
       skip_if_empty: true
       category: Jira
   - JIRA_IDENTIFIERS:
     opts:
       title: "Jira keys of projects related to Pull Request"
-      description: "Leave empty to not connecting PR with Jira task."
+      description: "First part of Jira's task id. For example with tasks with id ABC-123 it will be ABC. Leave empty to not connecting PR with Jira task."
       is_required: false
       skip_if_empty: true
       category: Jira
